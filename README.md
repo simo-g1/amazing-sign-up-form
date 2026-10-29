@@ -2,6 +2,8 @@
 
 A modern and dark-themed Sign-Up form built during my early CSS & JavaScript learning journey, focusing on core positioning, custom styling, and practical DOM manipulation.
 
+🔗 **Live Demo:** [View Demo](https://simo-g1.github.io/amazing-sign-up-form)  
+
 ## ✨ Features
 * **Modern Dark UI:** Clean design inspired by developer platforms like GitHub[cite: 6, 7].
 * **Password Visibility Toggle:** Interactive show/hide password feature powered by Vanilla JavaScript[cite: 6].
