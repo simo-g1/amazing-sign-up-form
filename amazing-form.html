@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="amazing-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@300&display=swap" rel="stylesheet">
+    <title>form</title>
+
+    <!-- Cheats -->
+    <style>
+        .passwords,
+        .confirm_password {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            top: 45%;
+            left: 250px;
+
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+        }
+    </style>
+    <!-- Cheats -->
+
+</head>
+
+<body>
+    <form action="" method="post">
+        <!-- target="_blank" -->
+        <h1>Sign Up</h1>
+        <div class="username">
+            <!-- <label for="username">Username:</label> -->
+            <input type="text" id="username" required placeholder="Enter your username" name="user" class="box"
+                minlength="3" maxlength="20">
+            <!-- value="osama" -->
+        </div>
+
+        <div class="email">
+            <!-- <label for="email">Email:</label> -->
+            <input type="email" id="email" required placeholder="write a valid email" value="simonot@gmail.com"
+                name="email" class="box">
+
+            <!-- readonly / disabled -->
+        </div>
+
+        <div class="passwords_section">
+            <div class="passwords">
+                <!-- <label for="password">Password:</label> -->
+                <input type="password" id="password" required placeholder="write a complex password" name="password"
+                    minlength="8" maxlength="20" class="box">
+
+                <!-- autofocus means the input will be focused when the page loads -->
+
+                <!-- Cheats -->
+
+                <span class="toggle-password" onclick="togglePassword('password', this)">👁</span>
+
+                <!-- Cheats -->
+
+            </div>
+
+            <div class="confirm_password">
+
+                <!-- <label for="confirm_password">Confirm Password:</label> -->
+                <input type="password" id="confirm_password" required placeholder="confirm your password"
+                    name="confirm_password" minlength="8" maxlength="20" class="box">
+
+                <!-- <input type="hidden" name="token" value="1234567890" minlength="8" maxlength="24"> -->
+
+                <!-- Cheats -->
+
+                <span class="toggle-password" onclick="togglePassword('confirm_password', this)">👁</span>
+                <!-- Cheats -->
+
+            </div>
+
+        </div>
+
+        <div class="inputs">
+            <p>Already have an account?</p>
+            <a href="https://www.google.com/" class="Forgot_Password">Forgot your password?</a>
+            <a href="https://www.google.com/" class="account">log in</a>
+            <label for="Sign-up"></label>
+            <input type="submit" name="Sign-up" id="Sign-up" value="Sign up" class="Sign-up">
+        </div>
+
+    </form>
+    <div class="me">
+        <p class="playwrite-au-tas-stt">Made by: Simo</p>
+        <P class="playwrite-au-tas-stt">Date: July 1, 2026</P>
+    </div>
+
+    <!-- Cheats -->
+    <script>
+        const form = document.querySelector('form');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm_password');
+
+        form.addEventListener('submit', function (e) {
+            if (password.value !== confirmPassword.value) {
+                e.preventDefault();
+                alert('كلمة المرور غير متطابقة');
+            }
+        });
+
+        function togglePassword(inputId, iconElement) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                iconElement.textContent = '👁';
+                iconElement.style.color = '#dfc7c78f';
+            } else {
+                input.type = 'password';
+                iconElement.textContent = '👁';
+                iconElement.style.color = '';
+            }
+        }
+
+    </script>
+    <!-- Cheats -->
+
+</body>
+
+</html>
